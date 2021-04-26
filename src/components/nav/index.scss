@@ -1,0 +1,29 @@
+@import '../../assets/styles/variable.scss';
+
+.site-nav {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $border;
+  font-weight: 500;
+
+  .menu-title {
+    padding: 0 24rpx;
+    font-size: 24px;
+  }
+
+  .menu-list {
+    display: flex;
+    align-items: center;
+  
+    li {
+      list-style: none;
+      padding: 0 12px;
+    }
+    
+    a:hover {
+      color: $text-link;
+    }
+  }
+}
