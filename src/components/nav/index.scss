@@ -9,8 +9,19 @@
   font-weight: 500;
 
   .menu-title {
-    padding: 0 24rpx;
+    padding: 24px;
     font-size: 24px;
+  }
+
+  .menu-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 20px;
+
+    .menu-icon {
+      font-size: 24px;
+    }
   }
 
   .menu-list {
@@ -24,6 +35,26 @@
     
     a:hover {
       color: $text-link;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .site-nav {
+    .menu-icon {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .site-nav {
+    .menu-container {
+      
+    }
+    .menu-icon {
+      display: block;
     }
   }
 }
