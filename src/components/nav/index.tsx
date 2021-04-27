@@ -17,17 +17,17 @@ const menus = [
 ]
 
 export const Navigation: React.FC = () => {
-  const [ active, setActive ] = useState<boolean>(true)
+  const [ menuActive, setMenuActive ] = useState<boolean>(false)
   return(
     <nav className="site-nav">
       <span className="menu-title">My Site</span>
       <div className="menu-container">
-        <ul className="menu-list">
+        <ul className={`menu-list ${menuActive && 'active'}`}>
           {menus.map((item, index) => (
             <li key={index}>{item.title}</li>
           ))}
         </ul>
-        <span className="menu-icon" onClick={() => setActive(true)}>
+        <span className="menu-icon" onClick={() => setMenuActive(!menuActive)}>
           <i className="ionicons icon ion-ios-menu" />
         </span>
       </div>
