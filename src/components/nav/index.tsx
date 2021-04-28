@@ -5,7 +5,7 @@ import './index.scss'
 const menus = [
   {
     title: 'Blog',
-    path: '/'
+    path: '/blog'
   },
   {
     title: 'About',

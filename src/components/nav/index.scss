@@ -33,6 +33,11 @@
     li {
       list-style: none;
       padding: 0 12px;
+
+      a {
+        text-decoration: none;
+        color: #444;
+      }
     }
     
     a:hover {
