@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './index.scss'
 
 const menus = [
@@ -16,7 +17,7 @@ const menus = [
   }
 ]
 
-export const Navigation: React.FC = () => {
+const Navigation: React.FC = () => {
   const [ menuActive, setMenuActive ] = useState<boolean>(false)
   return(
     <nav className="site-nav">
@@ -24,7 +25,11 @@ export const Navigation: React.FC = () => {
       <div className="menu-container">
         <ul className={`menu-list ${menuActive && 'active'}`}>
           {menus.map((item, index) => (
-            <li key={index}>{item.title}</li>
+            <li key={index}>
+              <Link to={item.path}>
+                {item.title}
+              </Link>
+            </li>
           ))}
         </ul>
         <span className="menu-icon" onClick={() => setMenuActive(!menuActive)}>
